@@ -1,0 +1,29 @@
+def factorial(n):
+    if n == 0 or n == 1:   # base case
+        return 1
+    else:
+        return n * factorial(n - 1)  # recursive call
+
+def fibonacci(n):
+    if n == 0:   # base case
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)  # recursive call
+def print_numbers(n):
+    if n == 0:   # base case
+        return
+    print_numbers(n - 1)   # recursive call
+    print(n, end=" ")
+
+
+
+num = 5
+print("Factorial of", num, "is:", factorial(num))
+
+fib_num = 6
+print("Fibonacci of", fib_num, "is:", fibonacci(fib_num))
+
+print("Numbers from 1 to", num, ":", end=" ")
+print_numbers(num)
