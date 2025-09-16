@@ -1,0 +1,39 @@
+public class RecursionExample {
+
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {   // base case
+            return 1;
+        } else {
+            return n * factorial(n - 1); // recursive call
+        }
+    }
+
+    public static int fibonacci(int n) {
+        if (n == 0) {   // base case
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2); // recursive call
+        }
+    }
+
+    public static void printNumbers(int n) {
+        if (n == 0) {   // base case
+            return;
+        }
+        printNumbers(n - 1);  // recursive call
+        System.out.print(n + " ");
+    }
+
+    public static void main(String[] args) {
+        int num = 5;
+        System.out.println("Factorial of " + num + " is: " + factorial(num));
+
+        int fibNum = 6;
+        System.out.println("Fibonacci of " + fibNum + " is: " + fibonacci(fibNum));
+
+        System.out.print("Numbers from 1 to " + num + ": ");
+        printNumbers(num);
+    }
+}
